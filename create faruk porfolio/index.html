@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create with Farouk 3D — Mini Studio</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader" aria-hidden="false">
+    <div class="preloader-inner">
+      <div class="logo">create with farouk 3d</div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText">0%</div>
+    </div>
+  </div>
+
+  <!-- SITE -->
+  <div class="site" id="site" aria-hidden="true">
+
+    <!-- HERO / VIDEO BACKGROUND -->
+    <header class="hero" id="hero">
+      <video id="bgVideo" muted playsinline></video>
+
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="brand">Create with <span>Farouk 3D</span></h1>
+        <p class="tag">Free lectures in our Discord • Weekly & monthly challenges with prizes</p>
+
+        <!-- Challenges moved right below hero tag -->
+        <div class="challenge hero-challenge">
+          <h3>Challenges</h3>
+          <p>Each week we run short briefs. Monthly winners get a prize and a feature on the channel.</p>
+          <ul>
+            <li>Weekly quick challenges — 48 hour briefs</li>
+            <li>Monthly showcase — judged winners with prizes</li>
+            <li>Job oppotunities — monthly winners also have access to job offers</li>
+            <li>world  — having access to people from different countries in the community </li>
+
+
+          </ul>
+        </div>
+
+        <!-- View Portfolio large mini-card (under challenges) -->
+        <div class="view-portfolio-card">
+          <a class="btn big-portfolio" id="portfolioScroll" href="#portfolio">View Portfolio</a>
+        </div>
+
+        <!-- Glowing Discord mini-card (still inside hero, under portfolio CTA) -->
+        <div class="join-discord-box">
+          <p class="discord-text">Join our Discord community now below 👇</p>
+          <a class="discord-glow-btn" href="YOUR_DISCORD_LINK_HERE" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SOCIAL row above portfolio (bigger + glowing) -->
+    <section class="socials-row" aria-label="social-links">
+      <a href="#" class="social-icon youtube" target="_blank" rel="noopener">YouTube</a>
+      <a href="#" class="social-icon tiktok" target="_blank" rel="noopener">TikTok</a>
+      <a href="#" class="social-icon twitter" target="_blank" rel="noopener">X</a>
+      <a href="mailto:farouk@example.com" class="social-icon email" target="_blank" rel="noopener">Email</a>
+    </section>
+
+    <!-- PORTFOLIO 3 TEMPLATES -->
+    <main>
+      <section id="portfolio" class="section portfolio">
+        <h2>Portfolio Categories</h2>
+        <p class="lead">Choose a category to explore my works.</p>
+
+        <div class="cards">
+          <article class="card" data-category="character">
+            <div class="card-inner">
+              <div class="card-title">Character Modeling</div>
+              <div class="card-sub">Detailed characters & rigs</div>
+            </div>
+          </article>
+
+          <article class="card" data-category="environment">
+            <div class="card-inner">
+              <div class="card-title">Environmental Texturing</div>
+              <div class="card-sub">Textures, materials & worlds</div>
+            </div>
+          </article>
+
+          <article class="card" data-category="motion">
+            <div class="card-inner">
+              <div class="card-title">Motion Design</div>
+              <div class="card-sub">Cinematic motion & VFX</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- JOIN / COMMUNITY (keeps original join section with socials inside) -->
+      <section id="join" class="section join">
+        <div class="join-left">
+          <h2>Join our Discord Community</h2>
+          <p>
+            Create with Farouk 3D is more than lessons — it's a creative hub. <strong>Weekly & monthly challenges</strong> with prizes,
+            mentorship, collabs, feedback sessions, and live critiques. Free to join.
+          </p>
+
+          <div class="socials">
+            <a class="social-btn discord" href="#" id="discordBtn">Join Discord</a>
+            <a class="social-btn youtube" href="#" id="youtubeBtn">YouTube</a>
+            <a class="social-btn tiktok" href="#" id="TiktokBtn">TikTok</a>
+            <a class="social-btn twitter" href="#" id="twitterBtn">X</a>
+            <a class="social-btn email" href="mailto:farouk@example.com">Email</a>
+          </div>
+        </div>
+
+        <div class="join-right">
+          <div class="challenge">
+            <h3>Community Perks</h3>
+            <p>Mentorship, critiques, collabs, and prize challenges — designed to help you level up fast.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© <span id="year"></span> Create with Farouk 3D • All rights reserved</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- PORTFOLIO MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      <h3 id="modalTitle">Category</h3>
+      <div class="modal-grid" id="modalGrid">
+        <!-- JS will insert project items here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- App script -->
+  <script src="script.js"></script>
+</body>
+</html>
